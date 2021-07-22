@@ -7,6 +7,7 @@ import {
   FooterText,
   FooterButton,
   FooterIconLogo,
+  FooterDivResponsive,
 } from './style'
 
 import { ReactComponent as IconEmail } from '../../assets/email.svg'
@@ -29,32 +30,36 @@ function FooterContent() {
             </FooterText>
           </FooterDiv>
 
-          <FooterDiv>
-            <FooterButton>
-              <IconEmail className="icon" />
-              Entre em contato
-            </FooterButton>
-          </FooterDiv>
+          <FooterDivResponsive>
+            <FooterDiv>
+              <FooterButton>
+                <IconEmail className="icon" />
+                Entre em contato
+              </FooterButton>
+            </FooterDiv>
 
-          <FooterDiv>
-            <FooterButton>
-              <IconPhone className="icon" />
-              Fale com o nosso
-              <br /> consultor online
-            </FooterButton>
-          </FooterDiv>
+            <FooterDiv>
+              <FooterButton>
+                <IconPhone className="icon" />
+                Fale com o nosso
+                <br /> consultor online
+              </FooterButton>
+            </FooterDiv>
+          </FooterDivResponsive>
 
-          <FooterDiv>
-            <FooterIconLogo>
-              Created by
-              <Logo className="logo" />
-            </FooterIconLogo>
+          <FooterDivResponsive>
+            <FooterDiv>
+              <FooterIconLogo>
+                Created by
+                <Logo className="logo" />
+              </FooterIconLogo>
 
-            <FooterIconLogo>
-              Powered by
-              <Vtex className="vtex" />
-            </FooterIconLogo>
-          </FooterDiv>
+              <FooterIconLogo>
+                Powered by
+                <Vtex className="vtex" />
+              </FooterIconLogo>
+            </FooterDiv>
+          </FooterDivResponsive>
         </ContentFooter>
       </Footer>
     </>

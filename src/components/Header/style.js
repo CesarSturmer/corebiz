@@ -4,27 +4,36 @@ export const BoxHeader = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  margin: 10px 0; 
- 
+  margin: 10px 0;
+
+  @media (max-width: 1240px) {
+    margin: 10px 10px;
+  }
 `
 
 export const ImageLogo = styled.img`
- 
   grid-column: 2 / 3;
 
-  /* @include tablet() {
-      width: 100%;
-    }
+  @media (max-width: 1240px) {
+    grid-column: 1 / 2;
+  }
 
+  @media (max-width: 950px) {
+    @content;
+  }
 
-    @include mobile() {
-      grid-area: filter;
-    } */
+  @media (max-width: 620px) {
+    @content;
+  }
 `
 export const Search = styled.div`
   grid-column: 3 / 5;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1240px) {
+    grid-column: 2 / 5;
+  }
 
   & > input {
     border: 0;
@@ -34,9 +43,13 @@ export const Search = styled.div`
   }
 `
 export const User = styled.div`
-   grid-column: 5/ 6;
+  grid-column: 5/ 6;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 1240px) {
+    grid-column: 5/ 7;
+  }
 
   & > div {
     display: flex;

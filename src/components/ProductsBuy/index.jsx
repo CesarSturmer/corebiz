@@ -24,7 +24,7 @@ import { ReactComponent as StarEmpty } from '../../assets/starEmpty.svg'
 function ProductsBuy({ titleProducts, productPurchase }) {
   const [products, setProducts] = useState([])
   const [selectProduct, setSelectProduct] = useState(0)
-  const [cart, setCart] = useState(0)
+ 
 
   useEffect(() => {
     axios
@@ -45,7 +45,7 @@ function ProductsBuy({ titleProducts, productPurchase }) {
     })
   }
 
-  const settings = {    
+  const settings = {
     arrows: true,
     infinite: true,
     speed: 1000,

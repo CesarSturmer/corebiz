@@ -4,18 +4,31 @@ export const Footer = styled.footer`
   width: 100%;
   height: 213px;
   background-color: #000;
+
+
 `
 export const ContentFooter = styled.footer`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   max-width: 1240px;
   height: 100%;
   margin: 0 auto;
+
+  @media (max-width: 950px) {
+    font-size: 14px;
+  }
 `
 export const FooterDiv = styled.div`
 
+`
+export const FooterDivResponsive = styled.div`
+    @media (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+    
+  }
 `
 export const FooterTitle = styled.p`
   color: #fff;
@@ -31,6 +44,10 @@ export const FooterTitle = styled.p`
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  @media (max-width: 950px) {
+    font-size: 16px;
+  }
 `
 
 export const FooterText = styled.p`
@@ -38,15 +55,11 @@ export const FooterText = styled.p`
   font-size: 20px;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  &::after {
-    display: block;
-    content: "";
-    width: 45px;
-    height: 5px;
-    background-color: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+  @media (max-width: 950px) {
+    font-size: 14px;
   }
+
 `
 
 
@@ -73,6 +86,13 @@ export const FooterButton = styled.button`
 
   & .icon {
     margin-right: 18px;
+  }
+
+  @media (max-width: 950px) {
+    width: 150px;
+    height: 38px;
+    margin-bottom: 10px !important; 
+   
   }
 `;
 

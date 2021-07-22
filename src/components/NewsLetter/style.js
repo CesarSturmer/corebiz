@@ -17,6 +17,10 @@ export const Title = styled.p`
   font-size: ${(props) => (props.small ? '14px' : '22px')};
   font-weight: bold;
   color: #333333;
+
+  @media (max-width: 950px) {
+    font-size: 18px;
+  }
 `
 
 export const NewForm = styled.form`
@@ -38,6 +42,11 @@ export const FormInput = styled.input`
   font-weight: bold;
   margin-right: 8px;
   border: ${(props) => (props.error ? '1px solid #D7182A' : '')};
+
+  @media (max-width: 950px) {
+    width: 200px;
+  height: 48px;
+  }
 
   &::placeholder {
     color: #585858;

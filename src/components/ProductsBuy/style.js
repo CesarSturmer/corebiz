@@ -2,8 +2,17 @@ import styled from 'styled-components'
 
 export const BoxContent = styled.div`
   width: 100%;
-  max-width: 1240px;
+  max-width: 1150px;
   margin: 0 auto;
+
+  @media (max-width: 1240px) {
+    max-width: 850px;
+  }
+
+  @media (max-width: 950px) {
+    max-width: 550px;  
+  }
+
   & .slick-list {
     padding-left: 37px;
   }
@@ -31,6 +40,7 @@ export const Title = styled.h3`
   }
 `
 
+
 export const ProductBox = styled.div`
   position: relative;
   max-width: 216px;
@@ -45,6 +55,11 @@ export const ProductBox = styled.div`
       transition: opacity 300ms linear;
     }
   }
+
+  @media (max-width: 950px) {
+    max-width: 200px;
+  }
+
 `
 
 export const ProductSeal = styled.span`
@@ -76,9 +91,20 @@ export const ProductImage = styled.img`
   width: 216px;
   height: 200px;
   display: block;
+
+  @media (max-width: 950px) {
+    width: 180px;
+    height: 150px;
+  }
+
 `
 export const ImageProduct = styled.img`
   width: 100%;
+
+  @media (max-width: 950px) {
+    width: 70%;
+ 
+  }
 `
 
 export const ProductData = styled.div`
@@ -91,6 +117,10 @@ export const ProductData = styled.div`
   width: 100%;
   box-sizing: border-box;
   transition: background-color 200ms linear;
+
+  @media (max-width: 950px) {
+ 
+  }
 
   button {
     margin: 10px;
@@ -114,6 +144,11 @@ export const ProductName = styled.p`
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 5px;
+
+  @media (max-width: 950px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
 `
 export const ProductStars = styled.ul`
   margin-bottom: 7px;
@@ -133,11 +168,19 @@ export const ProductPrice = styled.p`
   font-family: 'Nunito', sans-serif;
   color: #000;
   margin-bottom: 5px;
+
+  @media (max-width: 950px) {
+    font-size: 14px;
+  }
 `
 export const ProductInstallments = styled.p`
   margin-bottom: 8px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   font-family: 'Nunito', sans-serif;
   color: #7a7a7a;
+
+  @media (max-width: 950px) {
+    font-size: 10px;
+  }
 `
