@@ -10,6 +10,10 @@ export const NewsletterBox = styled.div`
   box-sizing: border-box;
   padding: 24px 0 36px 0;
   background-color: #f2f2f2;
+
+  @media (max-width: 620px) {
+    height: auto;
+  }
 `
 
 export const Title = styled.p`
@@ -26,6 +30,12 @@ export const Title = styled.p`
 export const NewForm = styled.form`
   display: flex;
   margin-top: 16px;
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const NewsletterInputWrapper = styled.div``
@@ -45,7 +55,7 @@ export const FormInput = styled.input`
 
   @media (max-width: 950px) {
     width: 200px;
-  height: 48px;
+    height: 48px;
   }
 
   &::placeholder {

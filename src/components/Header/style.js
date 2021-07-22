@@ -9,10 +9,6 @@ export const BoxHeader = styled.div`
   @media (max-width: 1240px) {
     margin: 10px 10px;
   }
-
-  @media (max-width: 620px) {
-   
-  }
 `
 
 export const ImageLogo = styled.img`
@@ -20,10 +16,6 @@ export const ImageLogo = styled.img`
 
   @media (max-width: 1240px) {
     grid-column: 1 / 2;
-  }
-
-  @media (max-width: 950px) {
-    @content;
   }
 
   @media (max-width: 620px) {
@@ -66,10 +58,8 @@ export const UserAccount = styled.p`
   color: #7a7a7a;
 
   @media (max-width: 620px) {
-      display: none;
+    display: none;
   }
-
-
 `
 export const UserCart = styled.h5`
   display: flex;

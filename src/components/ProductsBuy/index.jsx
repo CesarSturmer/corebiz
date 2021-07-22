@@ -13,7 +13,8 @@ import {
   ProductPrice,
   ProductInstallments,
 } from './style'
-import axios from 'axios'
+import api from '../../service/api'
+
 import Slider from 'react-slick'
 
 import { ReactComponent as ArrowLeft } from '../../assets/arrowLeft.svg'
@@ -24,11 +25,10 @@ import { ReactComponent as StarEmpty } from '../../assets/starEmpty.svg'
 function ProductsBuy({ titleProducts, productPurchase }) {
   const [products, setProducts] = useState([])
   const [selectProduct, setSelectProduct] = useState(0)
- 
 
   useEffect(() => {
-    axios
-      .get('https://corebiz-test.herokuapp.com/api/v1/products')
+    api
+      .get('products')
       .then((res) => {
         setProducts(res.data)
       })
@@ -44,6 +44,20 @@ function ProductsBuy({ titleProducts, productPurchase }) {
       return newValue
     })
   }
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", height: "60" }}
+        onClick={onClick}
+      >
+        {props.children}
+      </div>
+    );
+  }
+
+  
 
   const settings = {
     arrows: true,
@@ -51,8 +65,8 @@ function ProductsBuy({ titleProducts, productPurchase }) {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <ArrowLeft />,
-    nextArrow: <ArrowRight />,
+    prevArrow: <SamplePrevArrow><ArrowLeft /></SamplePrevArrow>,
+    nextArrow: <SamplePrevArrow><ArrowRight /></SamplePrevArrow>,
   }
 
   const convertBRL = (price) => {

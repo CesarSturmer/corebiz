@@ -8,6 +8,7 @@ import {
   FooterButton,
   FooterIconLogo,
   FooterDivResponsive,
+  FooterBoxText,
 } from './style'
 
 import { ReactComponent as IconEmail } from '../../assets/email.svg'
@@ -21,13 +22,15 @@ function FooterContent() {
       <Footer>
         <ContentFooter>
           <FooterDiv>
-            <FooterTitle>Localização</FooterTitle>
-            <FooterText>
-              Avenida Andrômeda, 2000. Bloco 6 e 8 <br />
-              Alphavile SP <br />
-              brasil@corebiz.ag <br />
-              +55 11 3090 1039
-            </FooterText>
+            <FooterBoxText>
+              <FooterTitle>Localização</FooterTitle>
+              <FooterText>
+                Avenida Andrômeda, 2000. Bloco 6 e 8 <br />
+                Alphavile SP <br />
+                brasil@corebiz.ag <br />
+                +55 11 3090 1039
+              </FooterText>
+            </FooterBoxText>
           </FooterDiv>
 
           <FooterDivResponsive>

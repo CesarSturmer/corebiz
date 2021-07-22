@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import api from '../../service/api'
+
 
 import {
   NewsletterBox,
@@ -43,13 +44,11 @@ function NewsLetter() {
     const hasError = Object.values(errors).some((error) => Boolean(error))
 
     if (hasError) {
-      return;
-      
+      return
     }
-    if(name && email) {
-
-      await axios
-        .post('https://corebiz-test.herokuapp.com/api/v1/newsletter', {
+    if (name && email) {
+      await api
+        .post('newsletter', {
           name: name,
           email: email,
         })
@@ -61,7 +60,6 @@ function NewsLetter() {
         })
         .catch(() => alert('erro ao cadastrar'))
     }
-
   }
 
   return (
@@ -73,7 +71,7 @@ function NewsLetter() {
             <div>
               <FormInput
                 placeholder="Digite seu nome"
-                onChangeName={(ev) => setName(ev.target.value)}
+                onChange={(ev) => setName(ev.target.value)}
                 error={Boolean(errors.name)}
               />
 
@@ -82,7 +80,7 @@ function NewsLetter() {
             <div>
               <FormInput
                 placeholder="Digite seu email"
-                onChangeEmail={(ev) => setEmail(ev.target.value)}
+                onChange={(ev) => setEmail(ev.target.value)}
                 error={Boolean(errors.email)}
               />
               <ErrorMessage>{errors.email}</ErrorMessage>

@@ -16,7 +16,7 @@ import {
 function Header({ purchase }) {
   return (
     <BoxHeader>
-      <ImageLogo src={Logo} alt="logo"/>
+      <ImageLogo src={Logo} alt="logo" />
 
       <Search>
         <input type="text" placeholder="O que está procurando" />
@@ -32,7 +32,7 @@ function Header({ purchase }) {
         <div>
           <img src={Shopping} alt="carrinho de compra" />
 
-          {purchase && <UserCart>{purchase}</UserCart>}
+          {purchase && <UserCart>{purchase !== 0 ? purchase : ''}</UserCart>}
         </div>
       </User>
     </BoxHeader>

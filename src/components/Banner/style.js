@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const BoxBanner = styled.ul `
+export const BoxBanner = styled.ul`
   width: 100%;
   & .slick-dots {
     bottom: 37px;
@@ -15,7 +15,7 @@ export const BoxBanner = styled.ul `
       border-radius: 50%;
       background-color: #bdbdbd;
       &::before {
-        content: "";
+        content: '';
       }
     }
   }
@@ -28,7 +28,7 @@ export const BannerList = styled.li`
     width: 100%;
     height: auto;
   }
-`;
+`
 
 export const BannerTextBox = styled.div`
   position: absolute;
@@ -43,10 +43,10 @@ export const BannerTextBox = styled.div`
   @media (max-width: 950px) {
     left: 5%;
   }
-`;
+`
 
 export const BannerTitle = styled.p`
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: #fff;
@@ -55,14 +55,18 @@ export const BannerTitle = styled.p`
   @media (max-width: 1240px) {
     font-size: 25px;
   }
-  
+
   @media (max-width: 950px) {
     font-size: 18px;
   }
-`;
+
+  @media (max-width: 620px) {
+    font-size: 14px;
+  }
+`
 
 export const BannerSubTitle = styled.p`
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 45px;
   font-weight: 900;
   color: #fff;
@@ -74,5 +78,8 @@ export const BannerSubTitle = styled.p`
   @media (max-width: 950px) {
     font-size: 25px;
   }
-  
-`;
+
+  @media (max-width: 620px) {
+    font-size: 18px;
+  }
+`

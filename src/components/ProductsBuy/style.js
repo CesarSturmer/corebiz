@@ -5,14 +5,6 @@ export const BoxContent = styled.div`
   max-width: 1150px;
   margin: 0 auto;
 
-  @media (max-width: 1240px) {
-    max-width: 850px;
-  }
-
-  @media (max-width: 950px) {
-    max-width: 550px;  
-  }
-
   & .slick-list {
     padding-left: 37px;
   }
@@ -21,8 +13,15 @@ export const BoxContent = styled.div`
       display: flex;
     }
   }
-`
 
+  @media (max-width: 1240px) {
+    max-width: 850px;
+  }
+
+  @media (max-width: 950px) {
+    max-width: 550px;
+  }
+`
 export const Title = styled.h3`
   margin-top: 25px;
   font-family: 'Nunito', sans-serif;
@@ -39,10 +38,9 @@ export const Title = styled.h3`
     margin-top: 6px;
   }
 `
-
-
 export const ProductBox = styled.div`
   position: relative;
+  max-width: 216px;
   max-width: 216px;
   overflow: hidden;
   &:hover {
@@ -59,9 +57,7 @@ export const ProductBox = styled.div`
   @media (max-width: 950px) {
     max-width: 200px;
   }
-
 `
-
 export const ProductSeal = styled.span`
   display: block;
   position: absolute;
@@ -96,14 +92,12 @@ export const ProductImage = styled.img`
     width: 180px;
     height: 150px;
   }
-
 `
 export const ImageProduct = styled.img`
   width: 100%;
 
   @media (max-width: 950px) {
     width: 70%;
- 
   }
 `
 
@@ -118,10 +112,6 @@ export const ProductData = styled.div`
   box-sizing: border-box;
   transition: background-color 200ms linear;
 
-  @media (max-width: 950px) {
- 
-  }
-
   button {
     margin: 10px;
     background: #000000;
@@ -130,7 +120,7 @@ export const ProductData = styled.div`
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
-    height: 30px;
+    height: 32px;
     width: 60%;
     text-transform: uppercase;
   }
@@ -156,6 +146,7 @@ export const ProductStars = styled.ul`
 `
 export const ProductListPrice = styled.p`
   font-size: 12px;
+  height: 12px;
   font-weight: 400;
   font-family: 'Nunito', sans-serif;
   text-decoration: line-through;
@@ -164,6 +155,7 @@ export const ProductListPrice = styled.p`
 `
 export const ProductPrice = styled.p`
   font-size: 18px;
+  height: 18px;
   font-weight: bold;
   font-family: 'Nunito', sans-serif;
   color: #000;
@@ -176,6 +168,7 @@ export const ProductPrice = styled.p`
 export const ProductInstallments = styled.p`
   margin-bottom: 8px;
   font-size: 12px;
+  height: 12px;
   font-weight: 400;
   font-family: 'Nunito', sans-serif;
   color: #7a7a7a;

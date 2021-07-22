@@ -5,7 +5,9 @@ export const Footer = styled.footer`
   height: 213px;
   background-color: #000;
 
-
+  @media (max-width: 620px) {
+    height: auto;
+  }
 `
 export const ContentFooter = styled.footer`
   display: flex;
@@ -19,27 +21,39 @@ export const ContentFooter = styled.footer`
   @media (max-width: 950px) {
     font-size: 14px;
   }
+
+  @media (max-width: 620px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 export const FooterDiv = styled.div`
   margin: 15px;
 `
 export const FooterDivResponsive = styled.div`
-
-
-    @media (max-width: 950px) {
+  @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
-    
   }
 `
+export const FooterBoxText = styled.div`
+  @media (max-width: 620px) {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    right: 70px;
+  }
+`
+
 export const FooterTitle = styled.p`
   color: #fff;
   font-size: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   &::after {
     display: block;
-    content: "";
+    content: '';
     width: 45px;
     height: 5px;
     background-color: #fff;
@@ -50,22 +64,22 @@ export const FooterTitle = styled.p`
   @media (max-width: 950px) {
     font-size: 16px;
   }
+
+  @media (max-width: 620px) {
+    float: left;
+  }
 `
 
 export const FooterText = styled.p`
   color: #fff;
   font-size: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
 
   @media (max-width: 950px) {
     font-size: 14px;
   }
-
 `
-
-
-
 
 export const FooterButton = styled.button`
   display: flex;
@@ -78,7 +92,7 @@ export const FooterButton = styled.button`
   border: none;
   border-radius: 5px;
   margin-top: 25px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 12px;
   cursor: pointer;
@@ -93,17 +107,16 @@ export const FooterButton = styled.button`
   @media (max-width: 950px) {
     width: 150px;
     height: 38px;
-    margin-bottom: 10px ; 
-   
+    margin-bottom: 10px;
   }
-`;
+`
 
 export const FooterIconLogo = styled.span`
   display: inline-flex;
   flex-direction: column;
   color: #fff;
   font-size: 10px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   cursor: pointer;
   & .logo {
@@ -113,7 +126,4 @@ export const FooterIconLogo = styled.span`
   & .vtex {
     margin-top: 4px;
   }
-`;
-
-
-
+`
