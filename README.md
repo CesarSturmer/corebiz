@@ -29,7 +29,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 -   ### Pré-requisitos
     
-    -   Necessário realizar a instalação do Node.js (recomendado uso da versão 12.16.1)
+    -   Necessário realizar a instalação do Node.js (recomendado uso da versão 16.5.0)
     -   Necessário ter um gerenciador de pacotes NPM ou Yarn
 
 ## 🚀 Getting started
