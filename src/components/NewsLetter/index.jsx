@@ -11,7 +11,7 @@ import {
   FormSubTitle,
 } from './style'
 
-function NewsLetter({}) {
+function NewsLetter() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
 

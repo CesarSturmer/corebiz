@@ -21,9 +21,11 @@ export const ContentFooter = styled.footer`
   }
 `
 export const FooterDiv = styled.div`
-
+  margin: 15px;
 `
 export const FooterDivResponsive = styled.div`
+
+
     @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
@@ -91,7 +93,7 @@ export const FooterButton = styled.button`
   @media (max-width: 950px) {
     width: 150px;
     height: 38px;
-    margin-bottom: 10px !important; 
+    margin-bottom: 10px ; 
    
   }
 `;
