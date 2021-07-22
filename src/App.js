@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Banner from './components/Banner';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ProductsBuy from './components/ProductsBuy';
+import NewsLetter from './components/NewsLetter';
+import FooterContent from './components/FooterContent';
 
 
 function App() {
 
   const [cart, setCart] = useState(
-    Number(localStorage.getItem("purchase")) || 0
+    Number(sessionStorage.getItem("purchase")) || 0
   );
 
   return (
@@ -26,6 +29,11 @@ function App() {
 
       <Banner />
 
+      <ProductsBuy  titleProducts={"Mais vendidos"} productPurchase={setCart}/>
+
+      <NewsLetter />
+
+      <FooterContent />
  
 
     

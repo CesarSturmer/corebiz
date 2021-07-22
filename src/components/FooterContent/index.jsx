@@ -1,39 +1,63 @@
 import React from 'react'
-import styles from './FooterContent.module.scss'
+import {
+  Footer,
+  ContentFooter,
+  FooterDiv,
+  FooterTitle,
+  FooterText,
+  FooterButton,
+  FooterIconLogo,
+} from './style'
+
+import { ReactComponent as IconEmail } from '../../assets/email.svg'
+import { ReactComponent as IconPhone } from '../../assets/phone.svg'
+import { ReactComponent as Logo } from '../../assets/logo-white.svg'
+import { ReactComponent as Vtex } from '../../assets/vtex.svg'
 
 function FooterContent() {
   return (
-    <div className={styles.contentFooter}>
-      <div className={styles.footerLocation}>
-        <h3>Localização</h3>
-        <div>
-          <p>Avenida Andrômeda, 2000. Bloco 6 e 8 </p>
-          <p>Alphavile SP</p>
-          <p>brasil@corebiz.ag</p>
-          <p>+55 11 3090 1039</p>
-        </div>
-        <p></p>
-      </div>
+    <>
+      <Footer>
+        <ContentFooter>
+          <FooterDiv>
+            <FooterTitle>Localização</FooterTitle>
+            <FooterText>
+              Avenida Andrômeda, 2000. Bloco 6 e 8 <br />
+              Alphavile SP <br />
+              brasil@corebiz.ag <br />
+              +55 11 3090 1039
+            </FooterText>
+          </FooterDiv>
 
-      <div className={styles.footerButtons}>
-        <div>
-          <button>
-            <img src="/email.svg" alt="email para entrar em contato" />
-            Entre em contato
-          </button>
-          <button>
-            <img src="phone.svg" alt="icone telefone para entrar em contato" />
-            Fale com o nosso consultor online
-          </button>
-        </div>
-      </div>
-      <div className={styles.footerLogos}>
-        <div>
-          <img src="/logoCorebizFooter.svg" alt="" />
-          <img src="/vtex.svg" alt="" />
-        </div>
-      </div>
-    </div>
+          <FooterDiv>
+            <FooterButton>
+              <IconEmail className="icon" />
+              Entre em contato
+            </FooterButton>
+          </FooterDiv>
+
+          <FooterDiv>
+            <FooterButton>
+              <IconPhone className="icon" />
+              Fale com o nosso
+              <br /> consultor online
+            </FooterButton>
+          </FooterDiv>
+
+          <FooterDiv>
+            <FooterIconLogo>
+              Created by
+              <Logo className="logo" />
+            </FooterIconLogo>
+
+            <FooterIconLogo>
+              Powered by
+              <Vtex className="vtex" />
+            </FooterIconLogo>
+          </FooterDiv>
+        </ContentFooter>
+      </Footer>
+    </>
   )
 }
 
