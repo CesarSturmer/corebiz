@@ -19,8 +19,10 @@ export const BoxContent = styled.div`
   }
 
   @media (max-width: 950px) {
-    max-width: 550px;
+    max-width: 600px;
   }
+
+
 `
 export const Title = styled.h3`
   margin-top: 25px;
@@ -41,7 +43,6 @@ export const Title = styled.h3`
 export const ProductBox = styled.div`
   position: relative;
   max-width: 216px;
-  max-width: 216px;
   overflow: hidden;
   &:hover {
     .shelf-product__data {
@@ -57,6 +58,7 @@ export const ProductBox = styled.div`
   @media (max-width: 950px) {
     max-width: 200px;
   }
+ 
 `
 export const ProductSeal = styled.span`
   display: block;
@@ -123,6 +125,10 @@ export const ProductData = styled.div`
     height: 32px;
     width: 60%;
     text-transform: uppercase;
+
+    @media (max-width: 620px) {
+      font-size: 8px;  
+    }
   }
 `
 
@@ -152,6 +158,10 @@ export const ProductListPrice = styled.p`
   text-decoration: line-through;
   color: #7a7a7a;
   margin-bottom: 5px;
+
+  @media (max-width: 620px) {
+    font-size: 10px;
+  }
 `
 export const ProductPrice = styled.p`
   font-size: 18px;
@@ -164,6 +174,10 @@ export const ProductPrice = styled.p`
   @media (max-width: 950px) {
     font-size: 14px;
   }
+
+  @media (max-width: 620px) {
+    font-size: 12px;
+  }
 `
 export const ProductInstallments = styled.p`
   margin-bottom: 8px;
@@ -174,6 +188,10 @@ export const ProductInstallments = styled.p`
   color: #7a7a7a;
 
   @media (max-width: 950px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 620px) {
     font-size: 10px;
   }
 `
